@@ -19,6 +19,15 @@ class _DetailPageState extends State<DetailPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Detail Page"),
+        leading: IconButton(
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+          icon: const Icon(
+            Icons.arrow_back_ios_new_rounded,
+            color: Colors.black,
+          ),
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16),
@@ -33,14 +42,15 @@ class _DetailPageState extends State<DetailPage> {
             Expanded(
               child: Container(
                 width: 400,
-                decoration: const BoxDecoration(
-                  boxShadow: [
+                decoration: BoxDecoration(
+                  boxShadow: const [
                     BoxShadow(
                         color: Colors.grey,
                         offset: Offset(3, -3),
                         blurRadius: 5)
                   ],
                   color: Colors.white,
+                  borderRadius: BorderRadius.circular(20),
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,

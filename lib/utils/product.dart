@@ -1052,3 +1052,5 @@ List<Map<String, dynamic>> allRecipies = [
     "mealType": ["Beverage"]
   }
 ];
+List<Map> favitems = [];
+List<Map> mealitems = [];
